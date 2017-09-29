@@ -43,7 +43,7 @@ RUN wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted
 
 # install php
 RUN apt-get update && \
-  apt-get install -y php7.0-fpm php7.0-cli php7.0-curl php7.0-gd php7.0-intl php7.0-pgsql
+  apt-get install -y php7.0-fpm php7.0-cli php7.0-curl php7.0-gd php7.0-intl php7.0-pgsql php7.0-devel php7.0-mbstring php7.0-pdo php7.0-gd php7.0-mysqlnd php7.0-mcrypt php7.0-openssl php7.0-pecl-redis php7.0-zip
 
 # install composer
 WORKDIR /usr/local/bin
