@@ -1,0 +1,13 @@
+machine:
+  timezone: Asia/Tokyo
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - docker pull centos:6
+
+test:
+  override:
+    - docker build .
+    - exit 0
