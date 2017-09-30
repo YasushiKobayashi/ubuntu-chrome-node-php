@@ -48,7 +48,8 @@ RUN apt-get update && \
 
 # install composer
 WORKDIR /usr/local/bin
-RUN curl -sS https://getcomposer.org/installer | php
+RUN curl -sS https://getcomposer.org/installer | php && \
+  mv composer.phar composer
 
 # setup python
 WORKDIR /root/
