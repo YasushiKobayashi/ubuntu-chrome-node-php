@@ -59,3 +59,10 @@ RUN wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz \
   && make altinstall
 ENV PYTHONIOENCODING "utf-8"
 RUN pip3.6 install selenium
+
+RUN apt-get update && \
+  apt-get install -y language-pack-ja-base language-pack-en
+
+ENV LANG ja_JP.UTF-8
+ENV LANGUAGE ja_JP:ja
+ENV LC_ALL ja_JP.UTF-8
